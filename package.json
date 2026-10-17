@@ -1,0 +1,22 @@
+{
+  "name": "dvkt-vinhlong",
+  "version": "1.0.0",
+  "description": "Hệ thống xây dựng giá dịch vụ khám bệnh, chữa bệnh tại tỉnh Vĩnh Long",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings server/index.mjs",
+    "dev": "node --no-warnings --watch server/index.mjs",
+    "import": "node --no-warnings scripts/import-excel.mjs",
+    "test": "node --no-warnings --test test/smoke.test.mjs test/gsheets.test.mjs"
+  },
+  "dependencies": {
+    "@fastify/multipart": "^9.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "@fastify/static": "^8.0.0",
+    "exceljs": "^4.4.0",
+    "fastify": "^5.0.0"
+  }
+}
+
